@@ -12,7 +12,14 @@ const App = () => {
 
   useEffect( ()=>{
 
-    const saveTasks = JSON.parse( localStorage.getItem('taskList') || [] ).tasks;
+    let saveTasks = JSON.parse( localStorage.getItem('taskList'));
+
+    if(!saveTasks || !saveTasks.tasks){
+      saveTasks = [];
+    }
+    else{
+      saveTasks = saveTasks.tasks;
+    }
 
     dispatch(set(saveTasks));
 
