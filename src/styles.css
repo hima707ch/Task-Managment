@@ -1,0 +1,128 @@
+body{
+    font-family: "Graphik", Helvetica, sans-serif, Lucida Sans Unicode;
+    max-width: 85rem;
+    margin: auto;
+    background-color: rgb(210, 210, 224);
+    padding: 2rem 5rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin : 2rem 2rem;
+}
+
+.header-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-form > button {
+    width: 30vw;
+    box-sizing: content-box;
+}
+
+input, textarea {
+    border: none;
+    padding: 1rem 1.5rem;
+    width: 30vw;
+    font-size: 1.2rem;
+    resize: none;
+    
+}
+
+.top-inp{
+    border-top-right-radius: 0.85rem;
+    border-top-left-radius: 0.85rem;
+}
+
+.bot-inp{
+    border-bottom-right-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+}
+.taskcard {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3.5rem;
+    background-color: rgb(237, 237, 237);
+    border: none;
+    border-radius: 2rem;
+    box-shadow: 0 0 15px 5px rgb(0,0,0,0.2);
+    margin-bottom: 5rem;
+}
+
+.taskdata{
+    padding-right: 3rem;
+}
+
+.taskdata > h3 {
+    font-size: 1.7rem;
+}
+
+.taskdata > p {
+    font-size: 1.4rem;
+}
+
+.taskbutton {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    background: rgb(57, 0, 26);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Graphik", Helvetica, sans-serif, Lucida Sans Unicode;
+    font-size: 1.15rem;
+    font-weight: 500;
+    line-height: 1.2;
+    padding: 0.85rem 1.5rem;
+    margin : 23.8px 0rem;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background 500ms ease;
+    border: none;
+    border-radius: 4rem;
+  }
+
+button:hover{
+background-color: rgb(204, 0, 92);
+}
+
+.overlay{
+    position: fixed;
+    top:0;
+    right: 0;
+    left : 0;
+    bottom : 0;
+    background-color: rgb(0,0,0,0.75);
+}
+
+.modal {
+    background-color: white;
+    padding: 6rem;
+    position: fixed;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2.25rem;
+
+}
+
+@media (max-width: 675px) {
+
+    .header {
+        flex-direction: column;
+    }
+
+    .taskcard{
+        flex-direction: column;
+    }
+    .modal{
+        padding: 2.5rem;
+    }
+    
+}
